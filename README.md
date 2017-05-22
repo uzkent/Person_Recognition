@@ -1,13 +1,11 @@
-The deep learning model refered by ZFNet [1] (improved version of the AlexNet) is used as the model to transfer learning from.
-We fine-tune this model on person recognition challegne. To do this, the ZFNet is trained on the different parts of human
-body to learn contextual features. We fine-tune ZFNet on four different parts of human body.
+The deep learning model refered by ZFNet [1] (improved version of the AlexNet) is used as the model to transfer AlexNet weights. We fine-tune this model on person recognition challegne. To do this, the ZFNet is trained on the different parts of human body to learn contextual features. We fine-tune ZFNet on four different parts of human body.
 
   1. Extended Head Area
   2. Upper Half Body Area
   3. Global Full Body Area.
   4. Full Scene Area.
   
-The fine-tuning is performed on the People in Photo Albums Dataset (PIPA) [2]. 
+The fine-tuning is performed on the People in Photo Albums Dataset (PIPA) [2]. To fine-tune ZFNet, we assign zero learning rates to all the layers other than the final classification layer. Also, to fine-tune ZFNet, we could reduce the learning rates of those layers instead of making them zero.
 
 [1] - Zeiler, Matthew D., and Rob Fergus. "Visualizing and understanding convolutional networks." In European conference on computer vision, pp. 818-833. Springer International Publishing, 2014.
 
